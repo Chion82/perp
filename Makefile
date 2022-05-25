@@ -42,6 +42,7 @@ runtools: ./_done.runtools
 clean:
 	rm -f ./_done.perpapps; cd perp && $(MAKE) clean
 	rm -f ./_done.runtools; cd runtools && $(MAKE) clean	
+	git clean -xn && git clean -xdf
 
 cleanlib:
 	rm -f ./_done.lasagna; cd lasagna && $(MAKE) clean
