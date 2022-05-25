@@ -873,7 +873,7 @@ OUTVEC_OBJS=\
 ## special builds for outvec:
 ## build generator for outvec_STDOUT.h:
 outvec/mk_outvec : outvec/mk_outvec.c
-	$(CC) $(CFLAGS) -o $@ outvec/mk_outvec.c
+	$(TOOLCHAIN_CC) $(CFLAGS) -o $@ outvec/mk_outvec.c
 
 ## generate outvec_STDOUT.h:
 outvec/outvec_STDOUT.h : outvec/mk_outvec
@@ -1007,7 +1007,7 @@ RLIMIT_OBJS=\
 ## special builds for rlimit:
 ## mk_rlimit (rlimit_defs generator):
 rlimit/mk_rlimit : rlimit/mk_rlimit.c
-	$(CC) $(CFLAGS) -o $@ rlimit/mk_rlimit.c
+	$(TOOLCHAIN_CC) $(CFLAGS) -o $@ rlimit/mk_rlimit.c
 
 ## generate rlimit_defs table:
 rlimit/rlimit_defs.c.in : rlimit/mk_rlimit
@@ -1061,7 +1061,7 @@ SYSSTR_OBJS=\
 ## special builds for sysstr:
 ## mysysstr sysno table generator:
 sysstr/mksysstr : sysstr/mksysstr.c
-	$(CC) $(CFLAGS) -o $@ sysstr/mksysstr.c
+	$(TOOLCHAIN_CC) $(CFLAGS) -o $@ sysstr/mksysstr.c
 
 ## generate errno table:
 sysstr/sysstr_errno.c.in : sysstr/mksysstr sysstr.h

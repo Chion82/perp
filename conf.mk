@@ -4,8 +4,9 @@
 # ===
 
 ## build configuration, standard gcc + libc:
-CC = gcc
-CFLAGS = -Wall -Wextra -Wshadow -DNDEBUG -O2
+TOOLCHAIN_CC := gcc
+CC := gcc
+CFLAGS := -Wall -Wextra -Wshadow -DNDEBUG -O2
 #CFLAGS = -Wall -Wextra -Wshadow -O2
 
 ## build configuration, dietlibc:
@@ -13,7 +14,7 @@ CFLAGS = -Wall -Wextra -Wshadow -DNDEBUG -O2
 #CFLAGS = -Wall -Wextra -Wshadow -DNDEBUG
 
 ## strip configuration
-STRIP = strip
+STRIP := strip
 #STRIP = /some/other/stripper
 
 ## install configuration:
